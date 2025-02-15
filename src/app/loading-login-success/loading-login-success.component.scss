@@ -1,0 +1,11 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+    .spinner {
+      filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    }
+  }
+  

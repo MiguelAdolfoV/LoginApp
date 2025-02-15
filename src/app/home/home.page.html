@@ -1,33 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
-  <div class="login-container">
-    <ion-item class="ion-margin-bottom">
-      <ion-label position="floating">Username</ion-label>
-      <ion-input
-        [(ngModel)]="username"
-        (ionInput)="validateInputs('username')"
-        [value]="username"
-        aria-label="Enter your username"
-      ></ion-input>
-    </ion-item>
-
-    <ion-item class="ion-margin-bottom">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input
-        [(ngModel)]="password"
-        (ionInput)="validateInputs('password')"
-        type="password"
-        aria-label="Enter your password"
-      ></ion-input>
-    </ion-item>
-
-    <ion-button expand="full" (click)="showModal()" [disabled]="!isValid" color="primary" strong>
-      Mostrar Información
-    </ion-button>
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Logo" />
   </div>
 </ion-content>
