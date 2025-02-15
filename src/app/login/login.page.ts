@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginPage {
   loginForm: FormGroup;
   loginFailed: boolean = false;
+  isLoggingIn: boolean = false;
 
   constructor(private fb: FormBuilder, private toastController: ToastController, private router: Router) {
     this.loginForm = this.fb.group({
@@ -43,7 +44,13 @@ export class LoginPage {
 
     if (usuario) {
       this.loginFailed = false;
-      this.router.navigate(['/home']);
+      this.isLoggingIn = true;
+
+      setTimeout(() => {
+        this.isLoggingIn = false;
+        this.router.navigate(['/home']);
+      }, 3000);// 3 segundos
+      
     } else {
       this.loginFailed = true;
       this.presentToast('Correo o contraseña incorrectos');

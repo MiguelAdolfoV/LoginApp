@@ -1,10 +1,12 @@
 .loading-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  
+    
     .spinner {
+      margin-top: 20px;
       filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
     }
   }
